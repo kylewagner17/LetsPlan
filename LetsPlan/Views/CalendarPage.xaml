@@ -16,18 +16,10 @@
                 </DataTemplate>
             </calendar:SfCalendar.HeaderTemplate>
         </calendar:SfCalendar>
-        
+
 
         <Button Text="Clear Events"
                 Clicked="OnClearEventClicked" />
-
-        <CollectionView ItemsSource="{Binding Events}">
-            <CollectionView.ItemTemplate>
-                <DataTemplate>
-                    <Label Text="{Binding Title}" FontSize="5" />
-                </DataTemplate>
-            </CollectionView.ItemTemplate>
-        </CollectionView>
 
     </VerticalStackLayout>
 </ContentPage>

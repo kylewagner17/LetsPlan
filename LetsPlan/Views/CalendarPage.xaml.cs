@@ -36,16 +36,17 @@ public partial class CalendarPage : ContentPage
             return;
         }
 
-        var modalPage = new CreateEventPage(e.Date, _databaseService);
+        //var modalPage = new CreateEventPage(e.Date, _databaseService);
+        var modalPage = new SelectedDayPage(e.Date,_databaseService);
 
         await Navigation.PushModalAsync(modalPage);
 
 
-        if (modalPage.CreatedEvent != null)
-        {
+        //if (modalPage.CreatedEvent != null)
+        //{
             
-            await _viewModel.SaveEvent(modalPage.CreatedEvent);
-        }
+            //await _viewModel.SaveEvent(modalPage.CreatedEvent);
+        //}
 
     }
 }

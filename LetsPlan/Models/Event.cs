@@ -10,6 +10,8 @@ namespace LetsPlan.Models
 {
     public class Event
     {
+        private List<Event> eventGroup;
+
         [PrimaryKey, AutoIncrement]
         public int Id { get; set; }
         public string Title { get; set; }
@@ -32,5 +34,6 @@ namespace LetsPlan.Models
             set => GroupsJson = JsonSerializer.Serialize(value);
         }
 
+        
     }
 }

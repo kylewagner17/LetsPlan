@@ -10,6 +10,7 @@ namespace LetsPlan.Services.Interfaces
     public interface IDatabaseService
     {
         Task<List<Event>> GetEventsAsync();
+        Task<List<Event>> GetEventsForDateAsync(DateTime selectedDate);
         Task SaveEventAsync(Event ev);
 
         Task ClearEventsAsync();

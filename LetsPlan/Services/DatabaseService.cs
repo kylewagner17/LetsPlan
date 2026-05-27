@@ -29,6 +29,13 @@ namespace LetsPlan.Services
             return await _db.Table<Event>().ToListAsync();
         }
 
+        public async Task<List<Event>> GetEventsForDateAsync(DateTime selectedDate)
+        {
+            await InitAsync();
+            return await _db.Table<Event>()
+                .Where(e => e.Date == selectedDate.Date).ToListAsync();
+        }
+
         public async Task SaveEventAsync(Event ev)
         {
             await InitAsync();
